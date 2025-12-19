@@ -1,6 +1,6 @@
-# Macro Toggle Tool (Windows 11)
+# Macro Program for Windows
 
-ホットキーで **マクロをトグル(開始/停止)** できる常駐型ツールです。  
+ホットキーで **マクロ開始/停止(トグル)** できる常駐型ツールです。  
 マクロは `macros.json` に「キー入力」「待機」「マウス操作」などの手順を定義します。
 
 - 開始/停止トリガを押すと開始、もう一度押すと停止
@@ -103,8 +103,6 @@ py -m json.tool .\macros.json
 { "type": "wait", "seconds": 0.2 }
 ```
 
----
-
 ### text（文字列入力）
 
 ```json
@@ -112,8 +110,6 @@ py -m json.tool .\macros.json
 ```
 
 ※ ゲームは文字入力を受けないことがあります。
-
----
 
 ### key（キー操作）
 
@@ -128,15 +124,11 @@ py -m json.tool .\macros.json
 { "type": "key", "key": "a", "action": "release" }
 ```
 
----
-
 ### combo（同時押し）
 
 ```json
 { "type": "combo", "keys": ["Key.ctrl_l", "c"] }
 ```
-
----
 
 ### mouse_click（クリック）
 
@@ -146,8 +138,6 @@ py -m json.tool .\macros.json
 
 * `button`: `"left"` / `"right"` / `"middle"`
 * `count`: 1=クリック、2=ダブルクリック
-
----
 
 ### mouse_button（クリック押しっぱなし）
 
@@ -162,8 +152,6 @@ py -m json.tool .\macros.json
 { "type": "mouse_button", "button": "left", "action": "release" }
 ```
 
----
-
 ### mouse_move（マウス移動）
 
 ```json
@@ -172,15 +160,11 @@ py -m json.tool .\macros.json
 
 `mode` は `"relative"` / `"absolute"`。
 
----
-
 ### mouse_scroll（スクロール）
 
 ```json
 { "type": "mouse_scroll", "dx": 0, "dy": -200 }
 ```
-
----
 
 ## サンプル
 
@@ -199,8 +183,6 @@ py -m json.tool .\macros.json
 ```
 
 トリガ再押下で停止すると、W は必ず release されます。
-
----
 
 ## トラブルシューティング
 
